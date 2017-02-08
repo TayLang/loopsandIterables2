@@ -1,11 +1,30 @@
 // PART 0: Write a function called squareDance() that squares each number in an array.
+var numArray = [2,4,6]
+var squareDance = function(num) {
+	var sqArray = []
+    for (var i = 0; i<num.length; i++) {
+    var sqNum = num[i]*num[i]
+    sqArray.push(sqNum)
+    }
+    
+    return sqArray
+}
 
 
 // PART 1: write a function called nicer(). 
 // It should clean up the language in its input sentence. 
 // Forbidden words include heck, dang, crappy, and dang.
 
-
+var nicer = function(phrase) {
+    var cleanPhrase = []
+	var phraseBits = phrase.split(' ')
+	for (var i = 0; i < phraseBits.length; i++) {
+		if (phraseBits[i] !== 'heck' || phraseBits[i] !== 'dang' || phraseBits[i] !== 'crappy') {
+        cleanPhrase.push(phraseBits[i])
+        }
+return cleanPhrase
+	}
+}
 // // PART 2: write a function called capitalizeAll(). 
 // It should take as input a sentence and capitalize the first letter
 // of every word in the sentence. 
